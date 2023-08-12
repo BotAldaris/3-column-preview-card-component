@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  padding-top: 5%;
+}
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.card {
+  display: flex;
+  padding: 10%;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.sedans {
+  background-color: var(--Bright-orange);
+  color: var(--Bright-orange);
+}
+.suvs {
+  background-color: var(--Dark-cyan);
+  color: var(--Dark-cyan);
+}
+.luxury {
+  background-color: var(--Very-dark-cyan);
+  color: var(--Very-dark-cyan);
+}
+.card__icon {
+  width: 64px;
+}
+.card__title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2rem;
+  color: var(--Very-light-gray);
+  font-family: 700;
+}
+.card__description {
+  color: var(--Transparent-white);
+  width: 85%;
+}
+.card__button {
+  border: solid var(--Very-light-gray);
+  padding: 1rem 0rem;
+  width: 50%;
+  border-radius: 4rem;
+  background-color: var(--Very-light-gray);
+  margin-bottom: 1%;
+  text-align: center;
+}
+.card__button:hover {
+  background-color: inherit;
+  color: var(--Very-light-gray);
+  border: solid var(--Very-light-gray);
+}
+.attribution {
+  text-align: center;
+  padding-block: 0.5rem;
+  background-color: var(--Dark-cyan);
+  color: white;
+  width: 100%;
+  bottom: 0;
+}
+
+.attribution a {
+  color: white;
+}
+@media (min-width: 768px) {
+  .conteiner {
+    flex-direction: row;
+  }
+  .card {
+    padding: 5%;
+  }
+  .card__description {
+    margin-bottom: 25%;
+    height: 50%;
+    width: 75%;
+    line-height: 1.25rem;
+  }
+  .card__button {
+    width: 70%;
+  }
+  .attribution {
+    position: fixed;
+  }
+}
